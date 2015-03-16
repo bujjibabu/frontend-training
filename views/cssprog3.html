@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<title>CSS</title>
+<style type="text/css">
+	.myul1{
+		list-style-type: none;
+	}
+	.myul1 li{
+	  color: #fff;
+	  display: inline-block;
+	  background: #000;
+	  padding: 10px 85px;
+	  font-size: 20px;
+	  font-weight: bold;
+	}
+	.myul2{
+		list-style-type: none;
+		background: red !important;
+	}
+	.myul2 li{
+	  color: #fff;
+	  display: inline-block;
+	  padding: 10px 85px;
+	  font-size: 20px;
+	  font-weight: bold;
+	  border-right: 3px solid blue;
+	}
+	.myul2 li:hover{
+		background: #DDD;
+		color:#000;
+		cursor: pointer;
+	}
+	.myul2 li:last-child{
+		border: none;
+	}
+</style>
+
+</head>
+<body id="myprogbody">
+<div>
+   <ul class="myul1">
+   		<li> list item1</li>
+   		<li> list item2</li>
+   		<li> list item3</li>
+   		<li> list item4</li>
+   		<li> list item5</li>
+   </ul>
+    <ul class="myul2" style="background:#000;">
+   		<li> list item1</li>
+   		<li> list item2</li>
+   		<li> list item3</li>
+   		<li> list item4</li>
+   		<li> list item5</li>
+   </ul>
+</div>
+</body>

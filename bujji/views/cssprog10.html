@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS</title>
+<style type="text/css">
+	.myhead{
+		text-align: center;
+	}
+	.mydiv {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera */
+    animation: myfirst 5s;
+	}
+	@keyframes myfirst {
+    0%   {background: red; left:0px; top:0px;}
+    25%  {background: yellow; left:300px; top:0px;}
+    50%  {background: blue; left:300px; top:300px;}
+    75%  {background: black; left:0px; top:300px;}
+    100% {background: green; left:0px; top:0px;}
+	}
+	@-moz-keyframes myfirst {
+    0%   {background: red; left:0px; top:0px;}
+    25%  {background: yellow; left:300px; top:0px;}
+    50%  {background: blue; left:300px; top:300px;}
+    75%  {background: black; left:0px; top:300px;}
+    100% {background: green; left:0px; top:0px;}
+	}
+	@-ms-keyframes myfirst {
+   	 0%   {background: red; left:0px; top:0px;}
+    25%  {background: yellow; left:300px; top:0px;}
+    50%  {background: blue; left:300px; top:300px;}
+    75%  {background: black; left:0px; top:300px;}
+    100% {background: green; left:0px; top:0px;}
+	}
+	@-webkit-keyframes myfirst {
+    0%   {background: red; left:0px; top:0px;}
+    25%  {background: yellow; left:300px; top:0px;}
+    50%  {background: blue; left:300px; top:300px;}
+    75%  {background: black; left:0px; top:300px;}
+    100% {background: green; left:0px; top:0px;}
+	}
+</style>
+</head>
+<body>
+	<h1 class="myhead">CSS Animations</h1>
+	<div class="mydiv"></div>
+</body>
+</html>

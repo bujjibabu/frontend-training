@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <style type="text/css">
+    .mydiv{
+    	width:50%;
+    	float:left;
+    }
+	 @media (max-width: 767px) {
+	     .mydiv{
+	  	     width:100%;
+		 } 
+	 }
+ @media (min-width: 768px and max-width: 992px) {
+	     .mydiv{
+	  	     width:50%;
+		 } 
+	 }
+
+ @media (min-width: 1200) {
+	     .mydiv{
+	  	     width:25%;
+		 } 
+	 } 
+    </style>
+</head>
+<body>
+    <div class="container">
+    	<h1 class="text-center">Bootstrap</h1>
+<!--     	col-xs-* (* -> 1-12);
+    	col-sm-* (* -> 1-12);
+    	col-md-* (* -> 1-12);
+    	col-lg-* (* -> 1-12); -->
+    	<div class="mydiv"> <img src="../images/googlelogo.png"></div>
+    	<div class="mydiv"> <img src="../images/googlelogo.png"></div>
+    </div>
+</body>
+</html>

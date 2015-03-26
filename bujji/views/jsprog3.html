@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body>
+    <br/>
+    <div class="container">
+    	<h4 class="text-center">Dtata types</h4>
+        <div class="text-success">Numbers Ex:10, 20, 29.45</div>
+        <div class="text-success">strings Ex:"bujji" or 'bujji'</div>
+        <div class="text-success">Boolean Ex:true, false</div>
+        <div>10+20 = <span id="mathop"></span></div>
+        <div id="msg">this is some msg</div>
+        <div id="msg1"></div>
+    </div>
+    <script type="text/javascript">
+        var a = 10,b = 20;
+        var x = a+b;
+        document.getElementById('mathop').innerHTML = x;
+       var gettingText = document.getElementById('msg').innerHTML;
+       alert(gettingText);
+       var z = "This is my string";
+       document.getElementById('msg1').innerHTML = z;
+    </script>
+</body>
+</html>

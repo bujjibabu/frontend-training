@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body>
+    <br/>
+    <div class="container">
+    	<h4 class="text-center">Logical OPS..</h4>
+      <div class="btn btn-danger" onclick="fnLogicalOp()">LogicalOP</div>
+    </div>
+    <script type="text/javascript">
+      function fnLogicalOp(){
+        var a = 10;
+        var b = "10";
+        var c = (a===b);
+
+        var d = 10;
+        var e = "10";
+        var f = (d==e);
+
+        if( c && f){
+          alert(true);
+        }else{
+          alert(false)
+        }
+
+        if( c || f){
+          alert(true);
+        }else{
+          alert(false)
+        }
+        var x;
+        var y = null;
+        var z = (x==y);
+        var a = 0, b=1, c=1233, d = "-10" , e = "";
+        if(e){
+          alert("true value" + e);
+        }else{
+          alert("flase value" + e);
+        }
+        alert("Z value: " + z);
+        alert("x value:" + x);
+        alert("y value:" + y);
+
+      }
+
+    </script>
+</body>
+</html>

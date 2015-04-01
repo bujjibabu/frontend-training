@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body>
+    <br/>
+    <div class="container">
+    	<h4 class="text-center">Strings</h4>
+      <div class="btn btn-danger" onclick="fnMyFunction1()">fnMyFunction1</div>
+    </div>
+    <script type="text/javascript">
+    function fnMyFunction1(){
+     var myString = 'apple, banana, kiwi'; 
+     var x = myString.substring(7,13);
+     var y = myString.slice(7,13);
+     console.log("substring",x);
+     console.log("slice method",y);
+
+   // string.slice(startingposition, endingposition)
+     // substrr(sposition,lengthofextracted chars);
+    var z = myString.substr(7,13);
+    console.log(z);
+
+//replace Method
+
+var myString = 'this is Innominds and innominds is doing product';
+
+var a = myString.replace(/innominds/ig,'Honey Well');
+console.log("relplaceMethod : ", a);
+ var b = "this is bujji";
+ var c = "babu";
+var d = b + " " + c;
+var e = b.concat(' ',c);
+ console.log(e);
+
+// uppper case and lower case
+var f = 'bujjibabu';
+var g = f.toUpperCase();
+console.log(g);
+
+var h = 'INNOMINDS';
+var i = h.toLowerCase();
+console.log("lower case : ", i);
+
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body>
+    <br/>
+    <div class="container">
+    	<h4 class="text-center">Object</h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Mobile</td>
+                    <td>Address</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="name"></td>
+                    <td id="phonenumber"></td>
+                    <td id="address"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript">
+        var myObject = {};
+        myObject = {name:'bujji',phone:95333068603,address:'a.p'};
+        document.getElementById('name').innerHTML = myObject.name;
+        document.getElementById('phonenumber').innerHTML = myObject.phone;
+        document.getElementById('address').innerHTML = myObject.address;
+
+        //var myObject = new object;
+
+    </script>
+</body>
+</html>

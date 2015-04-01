@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body>
+    <br/>
+    <div class="container">
+    	<h4 class="text-center">Numbers</h4>
+        <div class="btn btn-primary" onclick="fnNumtoString()">number to string</div>
+        <div class="btn btn-primary" onclick="fnStringtoNumber()">number to string</div>
+        <div class="btn btn-primary" onclick="fnRandom()">random</div>
+    </div>
+    <script type="text/javascript">
+        var num = 128;
+        console.log(num);
+        function fnNumtoString(){
+           var x = num.toString(16);
+            console.log(x);
+           var y = num.toString(8);
+            console.log(y);
+           var z = num.toString(2);
+            console.log(z);
+
+            var a = 123;
+            var b = a.toString();
+            console.log(a);
+            debugger;
+            console.log(b);
+
+           // toFixed()
+
+           var c = 9.3456;
+           var d = c.toFixed(2);
+           console.log(c);
+           console.log(d);
+
+        }; 
+        function fnStringtoNumber(){
+            var x= '10';
+            var y='4';
+            debugger;
+            var a = Number(x);
+            var b = Number(y);
+            var c=a+b;
+            console.log(c);
+            var d = parseInt('10');
+            var e = parseInt('10.456');
+            console.log('parseInt',d);
+            console.log('parseInt',e);
+        }
+        function fnRandom(){
+            console.log('random number between 0-1',Math.random())
+        }
+        var minnum = Math.min(10,14,2,5,25);
+        console.log(minnum);
+        var maxnum = Math.max(10,14,2,5,25);
+        console.log('maxnum',maxnum);
+        var mceil = Math.ceil(4.4);
+        console.log('math.ceil',mceil); //5
+        var mfloor = Math.floor(4.7);
+        console.log('math.fllor',mfloor); //4
+    </script>
+</body>
+</html>

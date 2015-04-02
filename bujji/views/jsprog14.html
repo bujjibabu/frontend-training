@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body>
+    <br/>
+    <div class="container">
+    	<h4 class="text-center" onload="myTable()">Dynamic Table</h4>
+        <div id="myDynamicTable"></div>
+    </div>
+    <script type="text/javascript">
+    function myTable(){
+       /* var myObj = {name:'bujji1',phone:95333068603,address:'a.p'};
+alert(myObj.length)
+        debugger;*/
+        var array = ['bujji','babu'];
+       alert(array[0]);
+
+        var myArray = [{name:'bujji1',phone:95333068603,address:'a.p'},
+        {name:'bujji2',phone:95333068603,address:'a.p'},
+        {name:'bujji3',phone:95333068603,address:'a.p'},
+        {name:'bujji4',phone:95333068603,address:'a.p'},
+        {name:'bujji5',phone:95333068603,address:'a.p'},
+        {name:'bujji6',phone:95333068603,address:'a.p'},
+        {name:'bujji7',phone:95333068603,address:'a.p'},
+        {name:'bujji8',phone:95333068603,address:'a.p'}];
+
+ /*var myObj = {
+    info :[
+        {name:'bujji1',phone:95333068603,address:'a.p'},
+        {name:'bujji2',phone:95333068603,address:'a.p'},
+        {name:'bujji3',phone:95333068603,address:'a.p'},
+        {name:'bujji4',phone:95333068603,address:'a.p'},
+        {name:'bujji5',phone:95333068603,address:'a.p'},
+        {name:'bujji6',phone:95333068603,address:'a.p'},
+        {name:'bujji7',phone:95333068603,address:'a.p'},
+        {name:'bujji8',phone:95333068603,address:'a.p'},
+        {name:'bujji8',phone:95333068603,address:'a.p'}]
+    };
+
+alert(myObj.info.length);*/
+
+        var myTableContents = "<table class='table table-bordered'>"
+        myTableContents +="<tr><td><b>Name</b></td><td><b>Mobile</b></td><td><b>Address</b></td></tr>"
+        var arraylength = myArray.length;
+        for(var i=0; i<arraylength; i++){
+            myTableContents +="<tr>"
+            myTableContents +="<td>" + myArray[i].name + "</td>"
+            myTableContents +="<td>" + myArray[i].phone + "</td>"
+            myTableContents +="<td>" + myArray[i].address + "</td>"
+            myTableContents +="</tr>"
+        }
+        myTableContents += "</table>"
+        document.getElementById('myDynamicTable').innerHTML = myTableContents;
+    }
+        myTable()
+    </script>
+</body>
+</html>

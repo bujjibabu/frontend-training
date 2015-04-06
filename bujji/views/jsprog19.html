@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body>
+    <br/>
+    <div class="container">
+        <h4>Array Sorting</h4>
+       <div class="col-sm-12">
+        <b class="text-success"> Original Array </b> :<div id="originalArray"></div>
+      </div>
+      <div class="col-sm-12">
+        <b class="text-success">Sorting Array</b> :<div id="sortingArry"></div>
+      </div>
+      <div class="col-sm-12">
+        <b class="text-success">Reverse Array</b> :<div id="reverseArry"></div>
+      </div>
+      <div class="col-sm-12">
+        <b class="text-success">Reverse Array</b> :<div id="numbersArry"></div>
+      </div>
+      <div class="col-sm-12">
+        <b class="text-success">Reverse Array</b> :<div id="numbersReverseArry"></div>
+      </div>
+        <div class="col-sm-12">
+        <b class="text-success">Reverse Array</b> :<div id="numberreversesort"></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+    function fnMyFun(){
+        var myArray = ['css','angular','javascript','bootstrap'];
+        console.log(myArray);
+        document.getElementById('originalArray').innerHTML = myArray;
+       var sortingArry = myArray.sort();
+        document.getElementById('sortingArry').innerHTML = sortingArry;
+       var reverseArry = myArray.reverse();
+        document.getElementById('reverseArry').innerHTML = reverseArry;
+        //strings sorting
+        //numbers 
+        var numbersArray = [1,100,2,10,3,200];
+        var numbersort = numbersArray.sort(function(a,b){return a-b;});
+        document.getElementById('numbersArry').innerHTML = numbersort;
+       var numReverse = numbersort.reverse()
+        document.getElementById('numbersReverseArry').innerHTML = numbersort;
+        var numbersArray = [1,100,2,10,3,200];
+        var numberreversesort = numbersArray.sort(function(a,b){return b-a;});
+        document.getElementById('numberreversesort').innerHTML = numberreversesort;
+        //1,10,100,2,200,3
+    }
+    fnMyFun();
+
+    </script>
+</body>
+</html>

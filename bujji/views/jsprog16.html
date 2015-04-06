@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body>
+    <br/>
+    <div class="container">
+    	<h4 class="text-center" onload="fnMyFun()">JSON</h4>
+        <div id="myDynamicTable"></div>
+    </div>
+    <script type="text/javascript">
+    function fnMyFun(){
+        //var myArray = ['bujji','sai','karthik','surya','srinivas'];
+        var myArray = [];
+        myArray[0] = 'bujji'; 
+       // myArray[0] = {name:'bujji',address:"hyd"} 
+         // myArray.push('bujji');
+          //myArray.push({name:'bujji',address:"hyd"});
+          myArray[1] ='sai';
+          console.log(myArray); // ['bujji',null,null,null,null,sai];
+          console.log(myArray[2]);
+          var myArray2 = ['bujji','sai','karthik','surya','srinivas'];
+          var convertedString = myArray2.toString();
+          console.log('convertedString',convertedString);
+    }
+    fnMyFun()
+    </script>
+</body>
+</html>

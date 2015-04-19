@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <style type="text/css">
+      .active{
+        background: blue;
+        color:#fff;
+        
+        border: 1px solid blue;
+      }
+      .myul{
+        list-style-type: none;
+        background: black;
+      }
+      .myul li{
+        margin-right: 10px;
+        padding:10px 40px;
+        color:#fff;
+        display: inline-block;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+    <br/>
+    <div class="container">
+        <h4 class="text-center text-success">jQuery</h4>
+        <div>
+          <ul class="myul">
+            <li class="active">list item1</li>
+            <li>list item2</li>
+            <li>list item3</li>
+            <li>list item4</li>
+            <li>list item5</li>
+            <li>list item6</li>
+            <li>list item7</li>
+          </ul>
+    </div>
+    <script type="text/javascript" src="../js/jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      //set attr
+      $('.myul li').click(function(){
+          $('li').removeClass('active');
+          $(this).addClass('active');
+        });
+
+    });
+    </script>
+</body>
+</html>

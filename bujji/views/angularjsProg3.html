@@ -1,0 +1,43 @@
+<!Doctype html>
+<html>
+<head>
+<title>Angularjs</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body ng-app="myApp">
+	<h4 class="text-center bg-danger">AngularTable</h4>
+	<div class="container">
+		<table class="table table-bordered table-stripped" ng-controller="firstCtrl">
+			<thead>
+				<tr>
+					<th>Username</th>
+					<th>Mobile</th>
+					<th>Address</th>
+					<th>zip</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="obj in myArray">
+					<td ng-bind="obj.uname"></td>
+					<td ng-bind="obj.mobile"></td>
+					<td ng-bind="obj.address"></td>
+					<td ng-bind="obj.zip"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+	<script type="text/javascript">
+	angular.module('myApp', []).controller('firstCtrl', function($scope) {
+		$scope.myArray = [
+		{uname:'bujjibabu',mobile:9533068603,address:"Hyderabad",zip:532459},
+		{uname:'bujji',mobile:95330686031,address:"Hyderabad1",zip:5324529},
+		{uname:'babu',mobile:95233068603,address:"Hyderabad2",zip:53234459},
+		{uname:'bujjibabub',mobile:9533068603,address:"Hyderabad3",zip:532459},
+		{uname:'nag',mobile:95330686303,address:"Hyderabad45",zip:532459},
+		{uname:'nag1',mobile:95330686303,address:"Hyderabad45",zip:532459},
+		{uname:'nag3',mobile:95330686303,address:"Hyderabad45",zip:532459}];
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!Doctype html>
+<html>
+<head>
+<title>Angularjs</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+<body ng-app="myApp">
+	<h4 class="text-center bg-danger">AngularTable</h4>
+	<div class="container">
+		<table class="table table-bordered table-stripped" ng-controller="firstCtrl">
+			<thead>
+				<tr>
+					<th>Username</th>
+					<th>Mobile</th>
+					<th>Address</th>
+					<th>zip</th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="obj in myArray">
+					<td>
+						<div class="form-group">
+							<label class="sr-only"> UserName: </label>
+							<input type="text" placeholder="enter name" class="form-control" ng-model="obj.myusername">
+						</div>
+					</td>
+					<td>
+						<div class="form-group">
+							<label class="sr-only"> mobile: </label>
+							<input type="number" placeholder="enter bmobile number" class="form-control" ng-model="obj.mobile">
+						</div>
+					</td>
+					<td>
+						<div class="form-group">
+							<label class="sr-only"> Address: </label>
+							<input type="text" placeholder="enter address" class="form-control" ng-model="obj.Address">
+						</div>
+					</td>
+					<td>
+						<div class="form-group">
+							<label class="sr-only"> Zip: </label>
+							<input type="text" placeholder="enter name" class="form-control" ng-model="obj.zip">
+						</div>
+					</td>
+					<td ng-click="fnAddrow()">+</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+	<script type="text/javascript">
+	angular.module('myApp', []).controller('firstCtrl', function($scope) {
+		$scope.myObj = {myusername:'',mobile:'',Address:'',zip:''}
+		$scope.myArray=[$scope.myObj]
+		$scope.fnAddrow = function(){
+			$scope.myArray.push({myusername:'',mobile:'',Address:'',zip:''});
+		}
+	});
+	</script>
+</body>
+</html>

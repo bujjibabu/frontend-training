@@ -1,15 +1,17 @@
 <!Doctype html>
-<html>
+<html  ng-app="myApp" >
 <head>
 <title>Angularjs</title>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 </head>
-<body ng-app="myApp">
+<body ng-controller="firstCtrl">
 	<h4 class="text-center bg-danger">AngularTable</h4>
 	<div class="container">
-		<table class="table table-bordered table-stripped" ng-controller="firstCtrl">
+		<table class="table table-bordered table-stripped">
 			<thead>
 				<tr>
+					<th></th>
+					<th></th>
 					<th>Username</th>
 					<th>Mobile</th>
 					<th>Address</th>
@@ -19,6 +21,8 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="obj in myArray">
+					<td><i class="glyphicon glyphicon-edit"></i></td>
+					<td><i class="glyphicon glyphicon-trash" ng-click="fnDelete($index)"></i></td>
 					<td>
 						<div class="form-group">
 							<label class="sr-only"> UserName: </label>
@@ -43,18 +47,91 @@
 							<input type="text" placeholder="enter name" class="form-control" ng-model="obj.zip">
 						</div>
 					</td>
-					<td ng-click="fnAddrow()">+</td>
+					<td><i  ng-click="fnAddrow()" class="glyphicon glyphicon-plus text-danger" ng-show="$index==0"></i></td>
 				</tr>
 			</tbody>
 		</table>
+		<div class="btn btn-danger" ng-click="fnSaveData()" data-toggle="modal" data-target="#myModal">Display Data</div>
+	<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog  modal-lg">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title text-success" id="myModalLabel">Table Data</h4>
+		      </div>
+		      <div class="modal-body">
+		       <table class="table table-bordered">
+		       	<thead>
+		       		<tr>
+		       			<th>S.NO</th>
+		       			<th>Name</th>
+		       			<th>Mobile No</th>
+		       			<th>Address</th>
+		       			<th>Zip</th>
+		       		</tr>
+		       	</thead>
+		       	<tbody>
+		       		<tr ng-repeat="obj in myArray">
+		       			<td ng-bind="$index"></td>
+		       			<td ng-bind="obj.myusername"></td>
+		       			<td ng-bind="obj.mobile"></td>
+		       			<td ng-bind="obj.Address"></td>
+		       			<td ng-bind="obj.zip"></td>
+		       		</tr>
+		       	</tbody>
+		       </table>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+<!-- 		<table class="table">
+			<tr ng-repeat="obj in MyTableData">
+			<td>{{obj.name}}</td>
+			<td>{{obj.mobile}}</td>
+			<td>{{obj.address}}</td>
+			</tr>
+		</table> -->
+
 	</div>
+	<script type="text/javascript" src="../js/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.js"></script>
 	<script type="text/javascript" src="../js/angular.min.js"></script>
 	<script type="text/javascript">
 	angular.module('myApp', []).controller('firstCtrl', function($scope) {
+
+	// $scope.MyTableData = [{name:"bujji",mobile:9533068603,address:"Hyderabad"},
+	// {name:"bujji1",mobile:9533068613,address:"Hyderabad1"},
+	// {name:"bujji1",mobile:9533068613,address:"Hyderabad1"},
+	// {name:"bujji1",mobile:9533068613,address:"Hyderabad1"},
+	// {name:"bujji1",mobile:9533068613,address:"Hyderabad1"},
+	// {name:"bujji1",mobile:9533068613,address:"Hyderabad1"},
+	// {name:"bujji1",mobile:9533068613,address:"Hyderabad1"},
+	// {name:"bujji1",mobile:9533068613,address:"Hyderabad1"}];
 		$scope.myObj = {myusername:'',mobile:'',Address:'',zip:''}
-		$scope.myArray=[$scope.myObj]
+		$scope.myArray=[$scope.myObj];
 		$scope.fnAddrow = function(){
 			$scope.myArray.push({myusername:'',mobile:'',Address:'',zip:''});
+		};
+		$scope.fnDelete = function(index){debugger;
+			$scope.myArray.splice(index,1);
+		}
+		$scope.fnSaveData  = function(){
+			console.log($scope.myArray);
+			// $.ajax({
+			//   type: "GET",
+			//   url: "server url",
+			
+			// }).done(function( result ) {
+			// 	$scope.data= result;
+			//     alert( "Data Saved: " + msg );
+			//   }).fail(function(msg){
+			//     alert( "Data Saved: " + msg );
+			// });
 		}
 	});
 	</script>
